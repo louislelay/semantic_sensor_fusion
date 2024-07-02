@@ -57,7 +57,7 @@ The Docker container is deleted once you close it. Any files outside of the shar
 To run the container, execute the following script:
 
 ```bash
-./bash_scripts/start_docker.bash
+./start_docker.bash
 ```
 
 Your shell will switch to the Docker container, and you should be placed in the `/home` directory, which is shared with your host.
