@@ -8,6 +8,10 @@ This work is part of the research conducted by PhD student Jiaxu Wu.
 
 ![Research Topic of PhD Student Jiaxu Wu](medias/wu_jiaxu_research.png)
 
+[Real World Robot Informatics Lab's Website](https://www.robot.t.u-tokyo.ac.jp/yamalab/index.html)
+
+[Qi An's Website](https://www.robot.t.u-tokyo.ac.jp/anlab/)
+
 ## Code
 
 The robot operates using ROS1 Noetic. To facilitate its use on any computer, we have created a Docker environment. This repository contains scripts for installing and running the Docker environment for both simulation and development purposes.
