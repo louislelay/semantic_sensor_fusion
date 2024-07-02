@@ -29,13 +29,13 @@ The installation process is compatible with any version of Ubuntu and requires 3
 2. Ensure the bash scripts are executable (this may be necessary after downloading):
 
     ```bash
-    chmod +x ./bash_scripts/*.bash
+    chmod +x ./*.bash
     ```
 
 3. If Docker is not already installed on your system, follow the steps in the [Docker installation documentation](https://docs.docker.com/get-docker/), or run the pre-made installation script from within the same directory:
 
     ```bash
-    ./bash_scripts/install_docker.bash
+    ./install_docker.bash
     ```
 
 ### Using the Docker Container
@@ -43,7 +43,7 @@ The installation process is compatible with any version of Ubuntu and requires 3
 Once Docker is installed, you can run the script to install the ROS1 Docker environment. This will download the preconfigured Docker image and the necessary sources for ros1:
 
 ```bash
-./bash_scripts/install_ros1_docker.bash
+./install_ros1_docker.bash
 ```
 
 The ros1 sources are placed in `./home/catkin_ws/src`. This workspace is where you will add your own ROS packages. The `./home` directory is shared between your host OS and the Docker container, meaning any changes made on one side will be reflected on the other.
