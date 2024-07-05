@@ -95,6 +95,8 @@ exit
 Once you've started the docker, you need to run:
 
 ```bash
+mkdir catkin_ws
+mkdir catkin_ws/src
 cd catkin_ws/src/
 git clone https://github.com/ros-drivers/velodyne.git
 cd ..
