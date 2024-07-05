@@ -1,3 +1,0 @@
-# Calibration of the RealSense Camera and the VLP16 LiDAR
-
-...
