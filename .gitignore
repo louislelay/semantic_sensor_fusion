@@ -1,8 +1,0 @@
-ros1_docker/home/catkin_ws/devel/
-ros1_docker/home/catkin_ws/logs/
-ros1_docker/home/catkin_ws/build/
-ros1_docker/home/catkin_ws/bin/
-ros1_docker/home/catkin_ws/lib/
-ros1_docker/home/catkin_ws/src/velodyne/
-ros1_docker/home/catkin_ws/.catkin_workspace
-ros1_docker/home/catkin_ws/src/CMakeLists.txt

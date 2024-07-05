@@ -1,8 +1,0 @@
-<launch>
-  <node pkg="realsense2_camera" type="realsense2_camera_node" name="realsense_camera" output="screen"/>
-  <node pkg="velodyne_pointcloud" type="cloud_node" name="velodyne_lidar" output="screen"/>
-
-  <node pkg="realsense_lidar_calibration" type="calibrate.py" name="calibrate" output="screen">
-    <param name="config_file" value="$(find realsense_lidar_calibration)/config/calibration_params.yaml"/>
-  </node>
-</launch>
