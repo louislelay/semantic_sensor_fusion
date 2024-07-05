@@ -88,4 +88,18 @@ To exit the container, just type :
 ```bash
 exit
 ```
+## LiDAR VLP16
+```bash
+sudo ifconfig enp2s0f2 192.168.3.100
+sudo rout add 192.168.1.201 enp2s0f2
 
+cd ~/catkin_ws/ && catkin_make
+roslaunch velodyne_pointcloud VLP16_points.launch
+```
+```bash
+rosnode list
+rostopic echo /velodyne_points
+```
+```bash
+rosrun rviz rviz -f velodyne
+```
