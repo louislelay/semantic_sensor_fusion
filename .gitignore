@@ -5,3 +5,5 @@
 /ros1_docker/home/catkin_ws/lib/
 /ros1_docker/home/catkin_ws/src/velodyne/
 /ros1_docker/home/catkin_ws/src/CmakeLists.txt
+ros1_docker/home/catkin_ws/.catkin_workspace
+ros1_docker/home/catkin_ws/src/CMakeLists.txt
