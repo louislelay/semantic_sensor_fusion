@@ -67,10 +67,10 @@ RUN apt-get update && apt-get install -q -y --no-install-recommends \
     ros-kinetic-realsense2-description \
     && rm -rf /var/lib/apt/lists/*
 
-#-----------------------------------------------------------------------------
-
 # create catkin_ws
 RUN mkdir -p /home/catkin_ws/src
+
+#-----------------------------------------------------------------------------
 
 # config terminator
 RUN mkdir -p /root/.config/terminator

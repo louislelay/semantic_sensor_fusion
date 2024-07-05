@@ -14,9 +14,9 @@ This work is part of the research conducted by PhD student Jiaxu Wu.
 
 ## Code
 
-The robot operates using ROS1 Noetic. To facilitate its use on any computer, we have created a Docker environment. This repository contains scripts for installing and running the Docker environment for both simulation and development purposes.
+The robot operates using ROS1 Kinetic. To facilitate its use on any computer, we have created a Docker environment. This repository contains scripts for installing and running the Docker environment for both simulation and development purposes.
 
-The Docker image is based on the OSRF ROS-Desktop-Full Noetic environment, which utilizes an Ubuntu 20 image.
+The Docker image is based on the OSRF ROS-Desktop-Full Kinetic environment, which utilizes an Ubuntu 20 image.
 
 The installation process is compatible with any version of Ubuntu and requires 3.6GB of disk space for the Docker image. Note that Windows and macOS are not supported.
 
@@ -88,18 +88,53 @@ To exit the container, just type :
 ```bash
 exit
 ```
-## LiDAR VLP16
+## LiDAR VLP16 sensor
+
+### Configuration
+
+Once you've started the docker, you need to run:
+
+```bash
+cd catkin_ws/src/
+git clone https://github.com/ros-drivers/velodyne.git
+cd ..
+rosdep install --from-paths src --ignore-src --rosdistro kinetic -y
+catkin_make
+```
+
+And then every time you need to configure the ip port for the LiDAR. Verify that the second ip adress is this using wireshark.
+
 ```bash
 sudo ifconfig enp2s0f2 192.168.3.100
 sudo route add 192.168.1.201 enp2s0f2
+```
 
-cd ~/catkin_ws/ && catkin_make
+### Test
+
+Using terminator, in the first terminal run: 
+```bash
 roslaunch velodyne_pointcloud VLP16_points.launch
 ```
+
+In a second one, run:
+
 ```bash
 rosnode list
 rostopic echo /velodyne_points
 ```
+
+Stop it and then run:
+
 ```bash
-rosrun rviz rviz -f velodyne
+rosrun rviz rviz
+```
+
+Add "cloudpoint2", and then select the topic "/velodyne_points".
+
+## RealSense Camera
+
+The configuration is automatically done. To test it:
+
+```bash
+roslaunch realsense2_camera demo_pointcloud.launch
 ```
