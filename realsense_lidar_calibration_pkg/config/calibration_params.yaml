@@ -29,18 +29,18 @@ lidar:
   vertical_angle_max: 15.0  # Vertical angle max in degrees
 
 # Point Cloud Filtering parameters
-#point_cloud_filtering:
-#  voxel_leaf_size: 0.05  # Leaf size for voxel grid filtering in meters
+point_cloud_filtering:
+  voxel_leaf_size: 0.05  # Leaf size for voxel grid filtering in meters
 
 # Synchronization parameters
-#synchronization:
-#  queue_size: 10
-#  slop: 0.1  # Approximate time synchronizer slop in seconds
+synchronization:
+  queue_size: 10
+  slop: 0.1  # Approximate time synchronizer slop in seconds
 
 # Visualization parameters
-#visualization:
-#  show_point_cloud: true
-#  show_camera_image: true
+visualization:
+  show_point_cloud: true
+  show_camera_image: true
 
 # Debugging and Logging
 #debug:
