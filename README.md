@@ -104,13 +104,6 @@ rosdep install --from-paths src --ignore-src --rosdistro kinetic -y
 catkin_make
 ```
 
-And then every time you need to configure the ip port for the LiDAR. Verify that the second ip adress is this using wireshark.
-
-```bash
-sudo ifconfig enp2s0f2 192.168.3.100
-sudo route add 192.168.1.201 enp2s0f2
-```
-
 ### Test
 
 Using terminator, in the first terminal run: 
