@@ -7,6 +7,7 @@ docker run -it --rm \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 --volume="$XAUTHORITY:/dot.Xauthority" \
 --mount type=bind,source="$(pwd)"/home,target=/home \
+--mount type=bind,source=/dev,target=/dev \
 --privileged \
 --net="host" \
 --name="ros1_docker" \
