@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker run -it --rm \
 --env="DISPLAY" \
 --env="QT_X11_NO_MITSHM=1" \
@@ -7,10 +9,6 @@ docker run -it --rm \
 --mount type=bind,source="$(pwd)"/home,target=/home \
 --privileged \
 --net="host" \
---name="ros" \
+--name="ros1_docker" \
 --workdir="/home" \
-ros1_local
-
-# Add this line before the "ros1_docker" line to mount another directory
-# The directory needs to exist in your host OS
-# --mount type=bind,source=/your/dir/path,target=/home/path/in/container \
+ros1_docker
