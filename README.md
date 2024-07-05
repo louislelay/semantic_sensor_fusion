@@ -125,10 +125,10 @@ rosnode list
 rostopic echo /velodyne_points
 ```
 
-Stop it and then run:
+Stop it and then run (the arg is to put velodyne as a fixed frame):
 
 ```bash
-rosrun rviz rviz
+rosrun rviz rviz -f velodyne
 ```
 
 Add "cloudpoint2", and then select the topic "/velodyne_points".
