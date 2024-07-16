@@ -1,0 +1,6 @@
+<launch>
+    <node name="realsense_camera" pkg="realsense2_camera" type="realsense2_camera_node" output="screen">
+        <!-- Add necessary parameters for your RealSense camera here -->
+    </node>
+    <node name="camera_lidar_calibration" pkg="camera_lidar_calibration" type="camera_lidar_calibration_node" output="screen" />
+</launch>
