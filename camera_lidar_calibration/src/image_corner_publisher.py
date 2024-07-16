@@ -2,6 +2,7 @@
 
 import rospy
 from sensor_msgs.msg import Image
+from std_msgs.msg import String
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
@@ -11,6 +12,7 @@ class ImageCornerPublisher:
 		self.bridge = CvBridge()
 		self.image_sub = rospy.Subscriber("/camera/color/image_raw", Image, self.image_callback)
 		self.image_pub = rospy.Publisher("/camera/corner_image", Image, queue_size=10)
+		self.coord_pub = rospy.Publisher('/coordinate_topic', String, queue_size=10)
 		
 	def image_callback(self, msg):
 		# Convert ROS image to OpenCV image
@@ -53,6 +55,12 @@ class ImageCornerPublisher:
 		# Convert the image back to ROS format and publish
 		corner_image_msg = self.bridge.cv2_to_imgmsg(cv_image, "bgr8")
 		self.image_pub.publish(corner_image_msg)
+
+
+		coord_msg = str(corner_coordinates)
+
+		self.coord_pub.publish(coord_msg)
+
 
 		
 if __name__ == "__main__":
