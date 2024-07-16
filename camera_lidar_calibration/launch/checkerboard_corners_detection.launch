@@ -1,0 +1,10 @@
+<launch>
+	<!-- Launch camera RealSense launchfile -->
+	<include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+
+	<!-- Launch node to get the corners -->
+    <node name="image_corner_publisher" pkg="camera_lidar_calibration" type="image_corner_publisher.py" output="screen" />
+
+	<!-- Launch RViz with a specific configuration file -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find camera_lidar_calibration)/rviz/checkerboard_corners_detection.rviz" />
+</launch>
