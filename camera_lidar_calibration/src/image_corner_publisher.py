@@ -11,8 +11,8 @@ class ImageCornerPublisher:
 	def __init__(self):
 		self.bridge = CvBridge()
 		self.image_sub = rospy.Subscriber("/camera/color/image_raw", Image, self.image_callback)
-		self.image_pub = rospy.Publisher("/camera/corner_image", Image, queue_size=0)
-		self.coord_pub = rospy.Publisher('/coordinate_topic', String, queue_size=0)
+		self.image_pub = rospy.Publisher("/camera/corner_image", Image, queue_size=10)
+		self.coord_pub = rospy.Publisher('/coordinate_topic', String, queue_size=10)
 		
 	def image_callback(self, msg):
 		# Convert ROS image to OpenCV image
