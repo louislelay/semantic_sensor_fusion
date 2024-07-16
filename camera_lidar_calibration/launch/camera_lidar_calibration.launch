@@ -2,5 +2,5 @@
 	<!-- camera -->
 	<include file="$(find realsense2_camera)/launch/rs_camera.launch" />
 
-    <node name="camera_lidar_calibration" pkg="camera_lidar_calibration" type="camera_lidar_calibration_node" output="screen" />
+    <node name="image_corner_publisher" pkg="camera_lidar_calibration" type="image_corner_publisher.py" output="screen" />
 </launch>
