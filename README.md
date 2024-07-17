@@ -1,4 +1,4 @@
-# Semantic Sensor Fusion for Unitree Go1
+# Semantic Sensor Fusion for Unitree Go1 (WIP)
 
 Welcome to the repository for the Semantic Sensor Fusion for Unitree Go1 project, developed by the Real World Robot Informatics Lab at the University of Tokyo. 
 
