@@ -1,0 +1,17 @@
+<launch>
+  <!-- Remapping for the camera calibration -->
+  <remap from="/camera/color/camera_info" to="/camera/camera_info"/>
+  <remap from="/camera/color/image_raw" to="/camera/image_raw"/> 
+
+
+  <!-- Include the RealSense launch file -->
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+  
+  <!-- Include the camera_calibration launch file -->
+  <!-- Run camera calibration node -->
+  <node pkg="camera_calibration" type="cameracalibrator.py" name="camera_calibrator" output="screen" args="--size 8x6 --square 0.108 --no-service-check">
+    <remap from="image" to="/camera/image_raw"/>
+    <remap from="camera" to="/camera"/>
+  </node>
+</launch>
+

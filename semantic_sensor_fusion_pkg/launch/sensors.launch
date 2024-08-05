@@ -1,0 +1,8 @@
+<launch> 
+  <!-- Include the RealSense launch file -->
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+
+  <!-- Include the Velodyne launch file -->
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" />
+</launch>
+

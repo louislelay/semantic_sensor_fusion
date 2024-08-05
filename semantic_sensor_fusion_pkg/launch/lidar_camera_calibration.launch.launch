@@ -1,0 +1,12 @@
+<launch>
+  <!-- Remapping for the lidar-camera calibration -->
+  <remap from="/camera/color/camera_info" to="/frontNear/left/camera_info"/>
+  <remap from="/camera/color/image_raw" to="/frontNear/left/image_raw"/>
+
+  <!-- Include the sensors launch file -->
+  <include file="$(find semantic_sensor_fusion_pkg)/launch/sensors.launch" />
+
+  <!-- Include the lidar_camera_calibration launch file -->
+  <include file="$(find lidar_camera_calibration)/launch/find_transform.launch" />
+</launch>
+

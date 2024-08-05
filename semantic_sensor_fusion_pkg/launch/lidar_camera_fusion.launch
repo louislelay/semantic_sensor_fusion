@@ -1,0 +1,10 @@
+<launch>
+  <!-- No Remapping Needed for the lidar-camera fusion -->
+ 
+  <!-- No sensors launched as it's already launched in the fusion pkg -->
+  <include file="$(find semantic_sensor_fusion_pkg)/launch/sensors.launch" />
+
+  <!-- Include the lidar_camera_fusion launch file -->
+  <include file="$(find lidar_camera_fusion)/launch/vlp16OnImg.launch" />
+</launch>
+
